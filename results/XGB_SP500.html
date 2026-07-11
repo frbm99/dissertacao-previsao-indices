@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>XGBoost - SP500</title>
+<style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#0f172a; color:#f8fafc; margin:30px; }
+    h1 { color:#38bdf8; font-size:1.4rem; }
+    .wrap { overflow-x:auto; }
+    table { border-collapse: collapse; width:100%; font-size:0.85rem; }
+    th, td { border:1px solid #334155; padding:8px 10px; text-align:center; white-space:nowrap; }
+    th { background:#1e293b; color:#eab308; text-transform:uppercase; font-size:0.72rem; letter-spacing:0.5px; }
+    td { background:#0b1220; }
+    td.txt { text-align:left; white-space:normal; max-width:340px; font-size:0.78rem; color:#cbd5e1; }
+</style>
+</head>
+<body>
+<h1>⚡ XGBoost - SP500 (t+1)</h1>
+<div class="wrap">
+<table>
+<tr>
+    <th>Modelo</th><th>Accuracy (%)</th><th>AUC ROC</th><th>Precision (%)</th>
+    <th>Recall (%)</th><th>F1-Score (%)</th><th>MCC</th><th>Kappa</th>
+    <th>Feature Set</th><th>Features por Extenso</th><th>Parâmetros Vencedores</th>
+    <th>TN</th><th>FP</th><th>FN</th><th>TP</th>
+</tr>
+<tr>
+    <td>XGBoost - SP500</td><td>50.30</td><td>0.5132</td><td>52.94</td>
+    <td>56.04</td><td>54.45</td><td>-0.0013</td><td>-0.0013</td>
+    <td>Top_5_XGBoost</td><td class="txt">Dist_EMA_14, TBill_3M_Diff, Dist_SMA_200, Dist_BB_High, RSI_100</td><td class="txt">subsample=0.8, reg_lambda=10, reg_alpha=0, n_estimators=100, max_depth=1, learning_rate=0.05, gamma=0.1, colsample_bytree=0.6</td>
+    <td>206</td><td>264</td><td>233</td><td>297</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

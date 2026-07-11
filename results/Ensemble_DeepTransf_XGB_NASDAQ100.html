@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Ensemble DeepTransformer+XGBoost - NASDAQ-100</title>
+<style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#0f172a; color:#f8fafc; margin:30px; }
+    h1 { color:#38bdf8; font-size:1.4rem; }
+    .wrap { overflow-x:auto; }
+    table { border-collapse: collapse; width:100%; font-size:0.85rem; }
+    th, td { border:1px solid #334155; padding:8px 10px; text-align:center; white-space:nowrap; }
+    th { background:#1e293b; color:#eab308; text-transform:uppercase; font-size:0.72rem; letter-spacing:0.5px; }
+    td { background:#0b1220; }
+    td.txt { text-align:left; white-space:normal; max-width:340px; font-size:0.78rem; color:#cbd5e1; }
+</style>
+</head>
+<body>
+<h1>⚖️ Ensemble DeepTransformer+XGBoost - NASDAQ-100 (t+1)</h1>
+<div class="wrap">
+<table>
+<tr>
+    <th>Modelo</th><th>Accuracy (%)</th><th>AUC ROC</th><th>Precision (%)</th>
+    <th>Recall (%)</th><th>F1-Score (%)</th><th>MCC</th><th>Kappa</th>
+    <th>Feature Set</th><th>Features por Extenso</th><th>Parâmetros Vencedores</th>
+    <th>TN</th><th>FP</th><th>FN</th><th>TP</th>
+</tr>
+<tr>
+    <td>Ensemble DeepTransformer+XGBoost - NASDAQ-100</td><td>56.49</td><td>0.5361</td><td>57.47</td>
+    <td>78.06</td><td>66.20</td><td>0.0979</td><td>0.0894</td>
+    <td>Permutation Top 12</td><td class="txt">Dolar_Ret, Dist_EMA_200, Return_50d, Dist_BB_Low, Petroleo_Ret, Dist_SMA_200, ROC_20, OBV_Zscore, Dist_SMA_14, Dist_SMA_5, Stoch_K, Treasury_10Y_Diff</td><td class="txt">fusao XGB=40%/DT=60%, dt_seed=1, blocos=2, lookback=20, xgb=depth3/300, threshold=0.50</td>
+    <td>139</td><td>316</td><td>120</td><td>427</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

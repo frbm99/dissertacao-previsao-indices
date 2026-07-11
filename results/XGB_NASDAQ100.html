@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>XGBoost - NASDAQ-100</title>
+<style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#0f172a; color:#f8fafc; margin:30px; }
+    h1 { color:#38bdf8; font-size:1.4rem; }
+    .wrap { overflow-x:auto; }
+    table { border-collapse: collapse; width:100%; font-size:0.85rem; }
+    th, td { border:1px solid #334155; padding:8px 10px; text-align:center; white-space:nowrap; }
+    th { background:#1e293b; color:#eab308; text-transform:uppercase; font-size:0.72rem; letter-spacing:0.5px; }
+    td { background:#0b1220; }
+    td.txt { text-align:left; white-space:normal; max-width:340px; font-size:0.78rem; color:#cbd5e1; }
+</style>
+</head>
+<body>
+<h1>⚡ XGBoost - NASDAQ-100 (t+1)</h1>
+<div class="wrap">
+<table>
+<tr>
+    <th>Modelo</th><th>Accuracy (%)</th><th>AUC ROC</th><th>Precision (%)</th>
+    <th>Recall (%)</th><th>F1-Score (%)</th><th>MCC</th><th>Kappa</th>
+    <th>Feature Set</th><th>Features por Extenso</th><th>Parâmetros Vencedores</th>
+    <th>TN</th><th>FP</th><th>FN</th><th>TP</th>
+</tr>
+<tr>
+    <td>XGBoost - NASDAQ-100</td><td>50.00</td><td>0.5030</td><td>54.32</td>
+    <td>52.83</td><td>53.57</td><td>-0.0057</td><td>-0.0057</td>
+    <td>Top_10_XGBoost</td><td class="txt">Dist_EMA_200, Dist_SMA_14, Return_14d, OBV_Zscore, TBill_3M_Diff, Dist_BB_High, Dolar_Ret, RSI_20, RSI_200, Dist_EMA_50</td><td class="txt">subsample=0.8, reg_lambda=10, reg_alpha=1, n_estimators=300, max_depth=3, learning_rate=0.05, gamma=1, colsample_bytree=0.8</td>
+    <td>212</td><td>243</td><td>258</td><td>289</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

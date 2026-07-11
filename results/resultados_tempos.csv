@@ -1,0 +1,7 @@
+Modelo,Tipo,t_treino_s,Epocas,t_infer_total_s,t_infer_por_amostra_ms
+Random Forest,Arvore,0.51,-,0.051,0.051
+XGBoost,Arvore,0.42,-,0.004,0.004
+LSTM,Rede,13.32,17,0.319,0.319
+GRU,Rede,8.47,9,0.361,0.361
+Transformer (1 bloco),Rede,9.96,13,0.336,0.336
+Deep Transformer (2 blocos),Rede,13.99,10,0.52,0.52

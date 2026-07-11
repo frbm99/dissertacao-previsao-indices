@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt"><head><meta charset="UTF-8"><title>GRU (HPO) - SP500</title>
+<style>
+ body { font-family:'Segoe UI',Tahoma,sans-serif; background:#0f172a; color:#f8fafc; margin:30px; }
+ h1 { color:#38bdf8; font-size:1.4rem; } .wrap { overflow-x:auto; }
+ table { border-collapse:collapse; width:100%; font-size:0.85rem; }
+ th,td { border:1px solid #334155; padding:8px 10px; text-align:center; white-space:nowrap; }
+ th { background:#1e293b; color:#eab308; text-transform:uppercase; font-size:0.72rem; }
+ td { background:#0b1220; } td.txt { text-align:left; white-space:normal; max-width:340px; font-size:0.78rem; color:#cbd5e1; }
+</style></head><body>
+<h1>🔧 GRU (HPO) - SP500 (t+1)</h1><div class="wrap"><table>
+<tr><th>Modelo</th><th>Accuracy (%)</th><th>AUC ROC</th><th>Precision (%)</th><th>Recall (%)</th>
+<th>F1-Score (%)</th><th>MCC</th><th>Kappa</th><th>Feature Set</th><th>Features por Extenso</th>
+<th>Parâmetros Vencedores</th><th>TN</th><th>FP</th><th>FN</th><th>TP</th></tr>
+<tr><td>GRU (HPO) - SP500</td><td>50.70</td><td>0.5123</td><td>54.42</td><td>43.02</td>
+<td>48.05</td><td>0.0241</td><td>0.0235</td><td>Permutation Top 12</td>
+<td class="txt">Dist_EMA_10, Dist_BB_High, Dolar_Ret, Spread_Diff, Dist_SMA_20, RSI_200, Return_10d, ROC_20, Stoch_K, Return_50d, Dist_SMA_200, Treasury_10Y_Diff</td><td class="txt">lookback=40, units=32, dropout=0.2, lr=0.0001, batch=64, thr=0.50 (HPO Hyperband/val_auc)</td>
+<td>279</td><td>191</td><td>302</td><td>228</td></tr>
+</table></div></body></html>

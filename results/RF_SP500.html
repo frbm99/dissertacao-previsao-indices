@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Random Forest - SP500</title>
+<style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#0f172a; color:#f8fafc; margin:30px; }
+    h1 { color:#38bdf8; font-size:1.4rem; }
+    .wrap { overflow-x:auto; }
+    table { border-collapse: collapse; width:100%; font-size:0.85rem; }
+    th, td { border:1px solid #334155; padding:8px 10px; text-align:center; white-space:nowrap; }
+    th { background:#1e293b; color:#eab308; text-transform:uppercase; font-size:0.72rem; letter-spacing:0.5px; }
+    td { background:#0b1220; }
+    td.txt { text-align:left; white-space:normal; max-width:340px; font-size:0.78rem; color:#cbd5e1; }
+</style>
+</head>
+<body>
+<h1>🌲 Random Forest - SP500 (t+1)</h1>
+<div class="wrap">
+<table>
+<tr>
+    <th>Modelo</th><th>Accuracy (%)</th><th>AUC ROC</th><th>Precision (%)</th>
+    <th>Recall (%)</th><th>F1-Score (%)</th><th>MCC</th><th>Kappa</th>
+    <th>Feature Set</th><th>Features por Extenso</th><th>Parâmetros Vencedores</th>
+    <th>TN</th><th>FP</th><th>FN</th><th>TP</th>
+</tr>
+<tr>
+    <td>Random Forest - SP500</td><td>53.10</td><td>0.5350</td><td>54.80</td>
+    <td>65.66</td><td>59.74</td><td>0.0477</td><td>0.0466</td>
+    <td>Top_10_RF</td><td class="txt">ROC_20, Dolar_Ret, Return_50d, Dist_EMA_100, Dist_EMA_50, Return_14d, RSI_5, TBill_3M_Diff, Treasury_10Y_Diff, MACD_Norm</td><td class="txt">max_depth=10, max_features=sqrt, min_samples_split=10, n_estimators=100</td>
+    <td>183</td><td>287</td><td>182</td><td>348</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

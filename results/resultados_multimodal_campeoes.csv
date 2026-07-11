@@ -1,0 +1,4 @@
+Indice,Campeao,MCC_uni_full,MCC_multi_full,Delta_full,MCC_uni_sub,MCC_multi_sub,Delta_sub
+SP500,DeepTransformer+RF (HPO),-0.0232,0.0209,0.0441,-0.0329,-0.0222,0.0107
+DJIA,LSTM+RF (sem-HPO),0.0172,0.0248,0.0076,0.0404,0.0366,-0.0038
+NASDAQ-100,GRU+RF (sem-HPO),0.0433,0.0378,-0.0055,0.0426,0.022,-0.0206

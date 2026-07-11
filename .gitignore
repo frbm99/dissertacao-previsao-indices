@@ -1,0 +1,20 @@
+# Ambiente virtual
+tese_env/
+
+# Bytecode e caches do Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Artefactos de procura do Keras Tuner (volumosos e regeneráveis)
+hpo_tuner/
+
+# Configuração local do Claude Code
+.claude/
+
+# Ficheiros temporários do sistema
+Thumbs.db
+.DS_Store
+
+_archive/
+models/
