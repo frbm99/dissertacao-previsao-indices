@@ -19,6 +19,14 @@ Repositório de código da dissertação de mestrado sobre a previsão da **dire
 - Seleção de variáveis por *permutation importance* fora da amostra (seletor treinado até 2019, avaliado em 2020).
 - Toda a otimização (hiperparâmetros, sementes, pesos de fusão) usa apenas treino e validação; o teste é tocado uma única vez, na avaliação final.
 
+## Extensões experimentais
+
+Sobre a base direcional a t+1, o trabalho inclui três extensões, aplicadas aos modelos campeões:
+
+8. **Decomposição de sinal (CEEMDAN)** — decomposição estritamente causal do preço de fecho em IMFs (janela expansível dia-a-dia, sem *lookahead*), adicionadas como variáveis aos campeões. Resultados em `results/resultados_ceemdan.csv`.
+9. **Horizontes de previsão** — reavaliação dos campeões para os horizontes t+3, t+5 e t+7 (só se altera a variável-alvo). Resultados em `results/multihorizonte/`.
+10. **Explicabilidade e calibração** — SHAP (TreeExplainer no ramo Random Forest, GradientExplainer nas redes) e diagramas de fiabilidade / Brier score. Resultados em `results/xai/` e figuras em `figures/xai/`.
+
 ## Estrutura do repositório
 
 ```
@@ -30,6 +38,9 @@ scripts/
   04_hpo/            Otimização de hiperparâmetros (Hyperband) e ensembles com redes otimizadas
   05_selecao/        Seleção dos campeões por validação e benchmark de custo computacional
   06_sentimento/     Sentimento FinBERT e ablação multimodal nos campeões
+  07_ceemdan/        Decomposição de sinal CEEMDAN (causal) e ablação
+  08_multihorizonte/ Previsão direcional a t+3, t+5, t+7
+  09_xai/            Explicabilidade (SHAP) e calibração (Brier)
 data/                Datasets (brutos, mestres, multimodais, manchetes e scores FinBERT)
 models/              Modelos treinados (.keras / .pkl)
 results/             Resultados: tabelas HTML por modelo e consolidados CSV
@@ -94,5 +105,7 @@ Notas:
 | ta | 0.11.0 |
 | yfinance | 1.3.0 |
 | matplotlib | 3.10.9 |
+| EMD-signal (CEEMDAN) | 1.10.0 |
+| shap | 0.52.0 |
 
 Todas as experiências foram executadas em **CPU** (o TensorFlow ≥ 2.11 não utiliza GPU em Windows nativo e a instalação de PyTorch é a variante CPU); os tempos reportados em `results/resultados_tempos.csv` refletem essa configuração.

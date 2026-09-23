@@ -18,3 +18,6 @@ Thumbs.db
 
 _archive/
 models/
+
+# Logs de consola das execuções (contêm caminhos absolutos locais)
+Log_*.txt

@@ -1,0 +1,4 @@
+Indice,Campeao,MCC_base,MCC_sent,MCC_ceemdan,MCC_ceemdan_sent,Delta_sent,Delta_ceemdan,Delta_ceemdan_sent,MCC_base_sub,MCC_sent_sub,MCC_ceemdan_sub,MCC_ceemdan_sent_sub,Delta_ceemdan_sub,Delta_ceemdan_sent_sub
+SP500,DeepTransformer+RF (HPO),-0.0232,0.0209,-0.0276,-0.0501,0.0441,-0.0044,-0.0269,-0.0329,-0.0222,-0.0148,0.0,0.0181,0.0329
+DJIA,LSTM+RF (sem-HPO),0.0172,0.0248,0.006,-0.0015,0.0076,-0.0112,-0.0187,0.0404,0.0366,0.0079,-0.0138,-0.0325,-0.0542
+NASDAQ-100,GRU+RF (sem-HPO),0.0433,0.0378,0.0377,-0.0636,-0.0055,-0.0056,-0.1069,0.0426,0.022,0.0951,-0.0185,0.0525,-0.0611
